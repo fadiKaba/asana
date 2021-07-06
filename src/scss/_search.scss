@@ -3,17 +3,19 @@
        background-color: blue;
        display: grid;
        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+       grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+       gap: 10px;
        
        div{
-       
+        &.ran {
+            grid-column-end: span 2;
+            
+            }
          .search-img{
            width: 100%;
        }  
        }
-       .ran {
-        grid-column-end: span 2;
-        width: 400px;
-    }
+       
        
    }
 } 

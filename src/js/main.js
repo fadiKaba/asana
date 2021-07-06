@@ -26,7 +26,7 @@ let randomNumber = function (arr){
 data.forEach(element => {
     innContainer.innerHTML += 
     `
-    <div calss="${randomNumber(nums)}">
+    <div class="${randomNumber(nums)}">
        <img class="search-img"  src="${element.url}">
     </div>
     `
