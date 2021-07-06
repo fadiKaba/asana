@@ -65,7 +65,7 @@ footer .inner-footer .dot-small {
   height: 8px;
 }
 
-.container {
+.grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
