@@ -1,21 +1,18 @@
-#search-page-container{
-   #search-page-inner-container{
-       background-color: blue;
-       display: grid;
-       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-       grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-       gap: 10px;
-       
-       div{
-        &.ran {
-            grid-column-end: span 2;
-            
-            }
-         .search-img{
-           width: 100%;
-       }  
-       }
-       
-       
-   }
-} 
+.search{
+    img{
+    width: 100%;
+    }
+}
+
+.search__container{
+    display: flex;
+    flex-wrap: no-wrap; 
+    column-gap: 10px;  
+    row-gap: 10px;  
+   
+}
+
+.search__column{
+    flex: 50%;
+    max-width: 50%;   
+}
