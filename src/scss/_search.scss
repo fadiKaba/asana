@@ -1,0 +1,19 @@
+#search-page-container{
+   #search-page-inner-container{
+       background-color: blue;
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+       
+       div{
+       
+         .search-img{
+           width: 100%;
+       }  
+       }
+       .ran {
+        grid-column-end: span 2;
+        width: 400px;
+    }
+       
+   }
+} 
