@@ -6,9 +6,48 @@ html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #000;
 }
 
+li{
+    list-style: none;
+}
+  
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    display:block;
+    border-radius: 50%;
+}
 button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-show{
+  animation: show 1s ease;
+  display: block;
+}
+
+.d-show-fast{
+    animation: show 0.2s ease;
+  display: block;
+}
+
+@keyframes show{
+    0%{
+     opacity: 0;
+    }
+    100%{
+     opacity: 1;
+    }
 }

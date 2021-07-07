@@ -12,20 +12,20 @@
   <div class="search">
       <div class="search__container">
           <div class="search__column">
-              <img src="https://source.unsplash.com/1600x900/?food" alt="">
-              <img src="https://source.unsplash.com/401x300/?food" alt="">
-              <img src="https://source.unsplash.com/600x600/?food" alt="">
-              <img src="https://source.unsplash.com/700x500/?food" alt="">
-              <img src="https://source.unsplash.com/200x300/?food" alt="">
-              <img src="https://source.unsplash.com/800x700/?food" alt="">
+            <img src="https://source.unsplash.com/random/400x600" alt="">
+            <img src="https://source.unsplash.com/random/300x400" alt="">
+            <img src="https://source.unsplash.com/random/200x300" alt="">
+            <img src="https://source.unsplash.com/random//401x500" alt="">
+            <img src="https://source.unsplash.com/random//300x501" alt="">
+            <img src="https://source.unsplash.com/random//401x500" alt="">
           </div>
           <div class="search__column">
-            <img src="https://source.unsplash.com/600x500/?food" alt="">
-            <img src="https://source.unsplash.com/400x300/?food" alt="">
-            <img src="https://source.unsplash.com/900x600/?food" alt="">
-            <img src="https://source.unsplash.com/1200x600/?food" alt="">
+            <img src="https://source.unsplash.com/600x700/?food" alt="">
+            <img src="https://source.unsplash.com/400x550/?food" alt="">
+            <img src="https://source.unsplash.com/900x1000/?food" alt="">
+            <img src="https://source.unsplash.com/350x600/?food" alt="">
             <img src="https://source.unsplash.com/500x400/?food" alt="">
-            <img src="https://source.unsplash.com/700x800/?food" alt="">
+            <img src="https://source.unsplash.com/700x900/?food" alt="">
         </div>
         <div class="search__column">
             <img src="https://source.unsplash.com/random/200x300" alt="">
@@ -36,22 +36,49 @@
             <img src="https://source.unsplash.com/random//401x500" alt="">
         </div>
     </div>
-    <div class="search-icons-container">
-       <div></div>
-       <div class="search-icons-container-2">
-           <button><img src="src/icos/location.png" alt=""></button>
-       </div>
-       <div class="search-icons-container-3">
-           <div></div>
-           <div>
-               <button class="scroll-btn"><img src="src/icos/req.png" alt="" ></button>
+        <div class="search-icons-container">
+            <div></div>
+            <div class="search-icons-container-2">
+                <div></div>
+                <div></div>
+                <button id="location-btn"><img src="src/icos/location.png" alt=""></button>
             </div>
-            <div>
-                <button><img src="src/icos/loupe.png" alt=""></button>
+            <div class="search-icons-container-3">
+                <div></div>
+                <div>
+                    <button class="scroll-btn"><img src="src/icos/scroll.png" alt="" ></button>
+                </div>
+                <div>
+                    <button id="search-btn"><img src="src/icos/loupe.png" alt=""></button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div id="locations">
+        <div>
+            <ul>
+                <li>Germany</li>
+                <li>USA</li>
+                <li>Japan</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="search-view d-none">
+       <div id="search-container-1">
+           <div class="input-container">
+               <input type="text" id="search-input" autocomplete="off">
+               <div id="search-result" class="d-none">
+                   <ul>
+  
+                   </ul>
+               </div>
+           </div>
        </div>
     </div>
-  </div>
+   
+
     <footer>
         <div>
             <div class="inner-footer">
