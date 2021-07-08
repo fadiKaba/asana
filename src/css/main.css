@@ -9,14 +9,14 @@
   margin-bottom: 10px;
 }
 
-.search .search-container {
+.search .search-container, .search .search-container-hotsopt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #fff;
 }
 
-.search .search-container .search-page-title {
+.search .search-container .search-page-title, .search .search-container-hotsopt .search-page-title {
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,12 +29,33 @@
           align-items: center;
 }
 
-.search .search-container div {
-  margin: 6px 2px;
+.search .search-container .search-page-title-hotspot, .search .search-container-hotsopt .search-page-title-hotspot {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 20vh;
+  text-align: center;
+}
+
+.search .search-container .search-page-title-hotspot div, .search .search-container-hotsopt .search-page-title-hotspot div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.search .search-container .inner-div, .search .search-container-hotsopt .inner-div {
+  margin: 8px 4px;
   height: 40vh;
 }
 
-.search .search-container img {
+.search .search-container img, .search .search-container-hotsopt img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 100%;
@@ -230,6 +251,15 @@ li {
   background-color: #fff;
   display: block;
   border-radius: 50%;
+}
+
+.small-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
 }
 
 button {

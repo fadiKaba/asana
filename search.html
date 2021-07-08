@@ -10,35 +10,71 @@
 </head>
 <body>
     
-  <div class="search">
-      <div class="search-container">
-          <div id="search-column-1" class="search__column">
+  <div class="search tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="search-container">
+            <div id="search-column-1">
 
-          </div>
-          <div id="search-column-2" class="search__column">
+            </div>
+            <div id="search-column-2">
 
-        </div>
-        <div id="search-column-3" class="search__column">
+            </div>
+            <div id="search-column-3">
 
+            </div>       
         </div>
     </div>
-        <div class="search-icons-container">
-            <div></div>
-            <div class="search-icons-container-2">
-                <div></div>
-                <div></div>
-                <button id="location-btn"><img src="src/icos/location.png" alt=""></button>
+
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="search-container-hotsopt">
+            <div id="search-hotsopt-column-1">
+
             </div>
-            <div class="search-icons-container-3">
-                <div></div>
-                <div>
-                    <button class="scroll-btn"><img src="src/icos/scroll.png" alt="" ></button>
-                </div>
-                <div>
-                    <button id="search-btn"><img src="src/icos/loupe.png" alt=""></button>
-                </div>
+            <div id="search-hotsopt-column-2">
+
+            </div>
+            <div id="search-hotsopt-column-3">
+
+            </div>       
+        </div>
+    </div>
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+
+    <div class="search-icons-container">
+        <div></div>
+        <div class="search-icons-container-2">
+            <div></div>
+            <div></div>
+            <button id="location-btn"><img src="src/icos/location.png" alt=""></button>
+        </div>
+        <div class="search-icons-container-3">
+            <div></div>
+            <div>
+                <button class="scroll-btn"><img src="src/icos/scroll.png" alt="" ></button>
+            </div>
+            <div>
+                <button id="search-btn"><img src="src/icos/loupe.png" alt=""></button>
             </div>
         </div>
+
+            <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item hotspot-nav-btn" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+            </li>
+        </ul>
+
+    </div>
     </div>
 
     <div id="locations">
@@ -64,6 +100,12 @@
        </div>
     </div>
    
+
+  
+  <!-- Tab panes -->
+  
+   
+
 
     <footer>
         <div>

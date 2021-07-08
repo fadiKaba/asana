@@ -15,7 +15,7 @@
 	//         max-width: 33%;
 	//     }
 	// }
-	.search-container {
+	.search-container, .search-container-hotsopt {
 		display: flex;
 
 		color: #fff;
@@ -25,8 +25,19 @@
 			justify-content: center;
 			align-items: center;
 		}
-		div {
-			margin: 6px 2px;
+        .search-page-title-hotspot{
+            display:grid;
+            grid-template-columns: 1fr;
+            height: 20vh;
+            text-align: center;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+        }
+		.inner-div {
+			margin: 8px 4px;
 			height: 40vh;
 		}
 		img {
