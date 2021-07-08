@@ -1,6 +1,7 @@
 
 // Search page 
 
+const searchContainer = document.querySelector('.search-container');
 const searchView = document.querySelector('.search-view');
 const searchInput = document.querySelector("#search-input");
 const searchResult = document.querySelector("#search-result");
@@ -31,6 +32,25 @@ let data = [
     {id: 16, description: "Cood"},
 ];
 
+let images = [
+    {id: 1, src: "https://source.unsplash.com/random/400x500"},
+    {id: 2, src: "https://source.unsplash.com/random/400x600"},
+    {id: 3, src: "https://source.unsplash.com/random/400x700"},
+    {id: 4, src: "https://source.unsplash.com/random/400x800"},
+    {id: 5, src: "https://source.unsplash.com/random/500x600"},
+    {id: 6, src: "https://source.unsplash.com/random/500x700"},
+    {id: 6, src: "https://source.unsplash.com/random/500x800"},
+    {id: 7, src: "https://source.unsplash.com/random/500x900"},
+    {id: 8, src: "https://source.unsplash.com/random/300x400"},
+    {id: 9, src: "https://source.unsplash.com/random/300x400"},
+    {id: 10, src: "https://source.unsplash.com/random/300x500"},
+    {id: 11, src: "https://source.unsplash.com/random/300x600"},
+    {id: 12, src: "https://source.unsplash.com/random/300x700"},
+    {id: 13, src: "https://source.unsplash.com/random/600x700"},
+    {id: 14, src: "https://source.unsplash.com/random/600x800"},
+    {id: 15, src: "https://source.unsplash.com/random/600x900"},
+    {id: 16, src: "https://source.unsplash.com/random/700x800"},
+]
 let result = [];
 
 // Search function
@@ -74,6 +94,12 @@ searchBtn.addEventListener('click', function(){
     searchView.classList.remove('d-show');
  }) */
 
+ document.addEventListener('click', function(){
+    console.log(searchInput.addEventListener);
+ });
+
+ 
+
 // Location btn
 
  locationBtn.addEventListener('click', function(){
@@ -82,4 +108,15 @@ searchBtn.addEventListener('click', function(){
 
 // End location btn
 
+// Search container
+ 
+images.forEach(item => {
+    searchContainer.innerHTML += 
+    `
+    <div>
+        <img src="${item.src}" alt="${item.id}">
+    </div>
+    `
+})
 
+// End search container

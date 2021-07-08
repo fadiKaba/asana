@@ -6,14 +6,33 @@
     border-radius: 8px;
     margin-bottom:10px;
     }
-    .search__container{
-        display: flex;
-        flex-wrap: no-wrap; 
-        column-gap: 7px;  
-        .search__column{
-            flex: 33%;
-            max-width: 33%;   
+    // .search-container{
+    //     display: flex;
+    //     flex-wrap: no-wrap; 
+    //     column-gap: 7px;  
+    //     .search-column{
+    //         flex: 33%;
+    //         max-width: 33%;   
+    //     }
+    // }
+    .search-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: #fff;
+        box-sizing: border-box;
+        grid-gap: 10px;
+        //grid-auto-rows: 100px;
+        div{
+            width: 33%s;
         }
+      div:nth-child(1){
+    //   grid-column: 2 / 3;
+    //   grid-row: 1 / 2;
+      }
+      div:nth-child(2){
+        // grid-column: 1 / 2;
+        // grid-row: 1 / 2;
+      }
     }
     .search-icons-container{
         position: fixed;
@@ -111,3 +130,7 @@
 
 
 * { box-sizing: border-box; }
+
+
+
+
