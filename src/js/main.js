@@ -39,17 +39,17 @@ let images = [
     {id: 4, src: "https://source.unsplash.com/random/400x800"},
     {id: 5, src: "https://source.unsplash.com/random/500x600"},
     {id: 6, src: "https://source.unsplash.com/random/500x700"},
-    {id: 6, src: "https://source.unsplash.com/random/500x800"},
-    {id: 7, src: "https://source.unsplash.com/random/500x900"},
-    {id: 8, src: "https://source.unsplash.com/random/300x400"},
+    {id: 7, src: "https://source.unsplash.com/random/500x800"},
+    {id: 8, src: "https://source.unsplash.com/random/500x900"},
     {id: 9, src: "https://source.unsplash.com/random/300x400"},
-    {id: 10, src: "https://source.unsplash.com/random/300x500"},
-    {id: 11, src: "https://source.unsplash.com/random/300x600"},
-    {id: 12, src: "https://source.unsplash.com/random/300x700"},
-    {id: 13, src: "https://source.unsplash.com/random/600x700"},
-    {id: 14, src: "https://source.unsplash.com/random/600x800"},
-    {id: 15, src: "https://source.unsplash.com/random/600x900"},
-    {id: 16, src: "https://source.unsplash.com/random/700x800"},
+    {id: 10, src: "https://source.unsplash.com/random/300x400"},
+    {id: 11, src: "https://source.unsplash.com/random/300x500"},
+    {id: 12, src: "https://source.unsplash.com/random/300x600"},
+    {id: 13, src: "https://source.unsplash.com/random/300x700"},
+    {id: 14, src: "https://source.unsplash.com/random/600x700"},
+    {id: 15, src: "https://source.unsplash.com/random/600x800"},
+    {id: 16, src: "https://source.unsplash.com/random/600x900"},
+    {id: 17, src: "https://source.unsplash.com/random/700x800"},
 ]
 let result = [];
 
@@ -109,14 +109,37 @@ searchBtn.addEventListener('click', function(){
 // End location btn
 
 // Search container
- 
-images.forEach(item => {
-    searchContainer.innerHTML += 
-    `
-    <div>
-        <img src="${item.src}" alt="${item.id}">
-    </div>
-    `
-})
+function fillSearchContainer(arr){
+    let searchCounter = 1;
+    let column = '';
+    let mainCounter = 0;
+    document.querySelector('#search-column-2').innerHTML+= `<div class="search-page-title">find your taste</div>`;
+    arr.forEach(item => {
+        if(searchCounter < 3){
+            column = document.querySelector('#search-column-' + searchCounter);
+            column.innerHTML += 
+            `
+            <div>
+                <img src="${item.src}" alt="${item.id}">
+            </div>
+            `;
+            searchCounter++;
+            mainCounter++;
+        }else{
+            column = document.querySelector('#search-column-' + searchCounter);
+            column.innerHTML += 
+            `
+            <div>
+                <img src="${item.src}" alt="${item.id}">
+            </div>
+            `;
+            searchCounter = 1;
+            mainCounter++;
+        }
+        
+    });
+}
+
+fillSearchContainer(images);
 
 // End search container
