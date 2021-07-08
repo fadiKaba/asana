@@ -74,9 +74,9 @@ function search(e){
     //     searchResult.classList.remove('d-none');
     // }
     if(result.length == 0){
-        searchResult.classList.remove('d-show-fast');
+        searchResult.classList.remove('display-show-fast');
     }else{
-        searchResult.classList.add('d-show-fast');
+        searchResult.classList.add('display-show-fast');
     }
   }
 
@@ -85,18 +85,24 @@ function search(e){
 // Search btn
 
 searchBtn.addEventListener('click', function(){
-    searchView.classList.add('d-show');
+    console.log("hello")
+    searchView.classList.add('display-show');
+    searchInput.focus();
 });
 
 // End search btn
 
-/* searchView.addEventListener('click', function(){
-    searchView.classList.remove('d-show');
- }) */
+// Search Module
 
- document.addEventListener('click', function(){
-    console.log(searchInput.addEventListener);
- });
+searchView.addEventListener('click', function(e){
+    e.target.classList.remove('display-show');
+    if(e.target == this){
+        searchContainer.classList.remove('ddisplay-show');
+    }
+})
+
+// End Search Module
+
 
  
 
@@ -120,7 +126,7 @@ function fillSearchContainer(arr){
             column.innerHTML += 
             `
             <div>
-                <img src="${item.src}" alt="${item.id}">
+                <a href="#"><img src="${item.src}" alt="${item.id}"></a>
             </div>
             `;
             searchCounter++;
@@ -130,7 +136,7 @@ function fillSearchContainer(arr){
             column.innerHTML += 
             `
             <div>
-                <img src="${item.src}" alt="${item.id}">
+                <a href="#"><img src="${item.src}" alt="${item.id}"></a>
             </div>
             `;
             searchCounter = 1;

@@ -37,8 +37,8 @@
 .search .search-container img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -116,6 +116,10 @@
   border-radius: 10px;
   border: none;
   z-index: 2;
+}
+
+.search-view #search-container-1 .input-container input:focus {
+  outline: none;
 }
 
 .search-view #search-container-1 .input-container #search-result {
@@ -234,17 +238,17 @@ button {
   cursor: pointer;
 }
 
-.d-none {
+.display-none {
   display: none;
 }
 
-.d-show {
-  -webkit-animation: show 1s ease;
-          animation: show 1s ease;
+.display-show {
+  -webkit-animation: show 0.5s ease;
+          animation: show 0.5s ease;
   display: block;
 }
 
-.d-show-fast {
+.display-show-fast {
   -webkit-animation: show 0.2s ease;
           animation: show 0.2s ease;
   display: block;

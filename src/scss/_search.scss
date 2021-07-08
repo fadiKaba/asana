@@ -31,8 +31,8 @@
 		}
 		img {
 			flex-shrink: 0;
-			min-width: 100%;
-			min-height: 100%;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
 	}
@@ -94,6 +94,9 @@
 				border-radius: 10px;
 				border: none;
 				z-index: 2;
+                &:focus{
+                    outline: none;
+                }
 			}
 			#search-result {
 				position: absolute;
